@@ -9,11 +9,6 @@ char password_buffer[50]="";   // To store user-provided password
 unsigned long previousMillis = 0;
 unsigned long interval = 10000;
 WiFiServer server(80); // using Server class to Set web server port number to 80
-String header;
-String output26State = "off";
-String output27State = "off";
-const int  output26 = 26; //   o/p variable
-const int output27 = 27; //   o/p variable
 
 void setup() {
     Serial.begin(115200);
