@@ -8,12 +8,6 @@ char ssid_buffer[50]="";       // To store user-provided SSID
 char password_buffer[50]="";   // To store user-provided password
 unsigned long previousMillis = 0;
 unsigned long interval = 10000;
-const char* ssid_ap = "XXX"
-const char* passwd_ap = "A123456a"
-int Wifi_SoftAP_Channel      = 11;
-IPAddress local_IP(10,0,1,1);
-IPAddress gateway(10,0,1,1);
-IPAddress subnet(255,255,255,0);
 WiFiServer server(80); // using Server class to Set web server port number to 80
 
 void setup() {
@@ -34,6 +28,7 @@ void loop() {
     WiFi.reconnect();
     previousMillis = currentMillis;
   }
+
     
     }
 
@@ -116,8 +111,7 @@ void serverinti()
 {
 
   Serial.print("Setting AP (Access Point)…");
-  WiFi.softAPConfig(local_IP, gateway, subnet);
-  WiFi.softAP(ssid_ap, passwd_ap, Wifi_SoftAP_Channel);
+  WiFi.softAP(ssid_bu,password_buffer ); // we remover the pass parameter to make the network free
   IPAddress IP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
   Serial.println(IP);
