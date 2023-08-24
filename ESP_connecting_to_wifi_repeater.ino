@@ -115,7 +115,7 @@ void serverinti()
 
   Serial.print("Setting AP (Access Point)…");
   WiFi.softAPConfig(local_IP, gateway, subnet);
-  WiFi.softAP(ssid_soft_ap, password_soft_ap, Wifi_SoftAP_Channel);
+  WiFi.softAP(ssid_buffer, password_buffer, Wifi_SoftAP_Channel);
   IPAddress IP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
   Serial.println(IP);
