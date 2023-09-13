@@ -1,4 +1,4 @@
-Sure, here's a README file for your code:
+
 
 # WiFi Connection and Server Initialization
 
