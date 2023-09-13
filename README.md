@@ -25,3 +25,5 @@ This code requires the "WiFi.h" library.
 Please ensure you have permission to connect to the WiFi network you are attempting to connect to. Misuse of this code may violate laws or regulations in your jurisdiction.
 
 Remember, this is just a basic README file. Depending on your project's complexity and requirements, you might want to add more sections like 'Installation', 'Contributing', etc.
+## Note
+- There is a problem in the NAT function of ESP32 Which can be solved using ROUTING setting in the default gateway(router)
